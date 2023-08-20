@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-compatible" content="IE=edge">
+    <meta name="viewpoint" content="width-device-width,initial-scale=1.0">
+    <title>web register</title>
+    <link rel="stylesheet" href="style.css">
+    <style>*{
+        margin: 0;
+        padding: o;
+        box-sizing: border-box;
+        font-family:'poppins', sans-serif ;
+    }
+    
+    body{
+        height: 500px;
+        width: 100%;
+        display: flex;
+        background: url(1690568298927.jpg) no-repeat;
+        background-size: cover;
+    }
+    
+    header{
+        position: fixed;
+        top: 0;
+        left: -84px;
+        width: 100%;
+        padding: 20px 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 99;
+    }
+    
+    .HITTER{
+        font-family: 'Haettenschweiler', 'Arial Narrow Bold';
+        font-size: 2.5em;
+        color:rgba(64, 8, 219, 0.774);
+        user-select: none;
+    }
+    
+    .navigation a{
+        position: relative;
+        font-size: 1.3em;
+        color:rgba(64, 8, 219, 0.774);
+        text-decoration: none;
+        font-weight: 600;
+        margin-left: 40px;
+    }
+    
+    .navigation a::after{
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: -6px;
+        width: %;
+        height: 3px;
+        background:#aaeb61;
+        transform-origin: right;
+        transform: scale(0);
+        transition: transform .3s;
+    }
+     
+    .navigation a:hover::after{
+        transform-origin: left;
+        transform: scale(1.3);
+    }
+    
+    .navigation .btnlogin-popuop{
+        width: 135px;
+        height: 50px;
+        background:transparent;
+        border: 2px solid #d36a6a;
+        outline: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 1.1em;
+        color: #227177;
+        font-weight: 500;
+        margin-left: 40px;
+        transition: .5s ;
+    }
+    
+    
+    .navigation .btnlogin-popuop:hover{
+        background: #aaeb61;
+        color: black;
+    }
+    
+    .wrapper{
+        position: relative;
+        width: 400px;
+        height: 440px;
+        background: transparent;
+        border: 2px solid rgba(255,255,255,.5);
+        border-radius: 18px;
+        backdrop-filter: blur(20px);
+        box-shadow: 0 0 30px  rgba(0,0,0,.5);
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        margin: 150px 0px 0px 470px;
+    }
+    
+    .wrapper .form-box{
+        width: 100%;
+        padding: 40px;
+    }
+    
+    .form-box h2{
+        height: 50px;
+        font-size: 2em;
+        color: #162938;
+        text-align: center;
+        
+    }
+    
+    .input-box{
+        position: relative;
+        width: 100%;
+        height: 50px;
+        border-bottom: 2px solid #162938;
+        margin: 30px 0;
+    }
+    
+    
+    .input-box label{
+        position: absolute;
+        top: 50%;
+        left: 24px;
+        transform: translate(-50%);
+        font-size: 1em;
+        color: #162938;
+        font-weight: 500;
+        pointer-events: none;
+        transition:.5s;
+    }
+    
+    .input-box label1{
+        position: absolute;
+        top: 50%;
+        left: 35px;
+        transform: translate(-50%);
+        font-size: 1em;
+        color: #162938;
+        font-weight: 500;
+        pointer-events: none;
+        transition:.5s;
+    }
+    
+    .input-box input:focus~ label1,
+    .input-box input:valid~ label1{
+        top: -5px;
+    }
+    
+    .input-box input:focus~label,
+    .input-box input:valid~label{
+        top: -5px;
+    }
+    
+    .input-box input{
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        border: none;
+        outline: none;
+        font-size: 1em;
+        color: #162938;
+        font-weight:600;
+        padding: 0 35px 0 5px;
+    }
+    
+    .input-box .icon{
+        position:absolute;
+        right:8px;
+        font-size: 1.2em;
+        color: #162938;
+        line-height: 57px;
+    }
+    
+    .remember-forgot{
+        font-size: .9em;
+        color: #162938;
+        font-weight: 500;
+        margin: -15px 0 15px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .remember-forgot label input{
+        accent-color: #162938;
+        margin-right: 3px;
+    }
+    
+    .remember-forgot a{
+        color: #162938;
+        text-decoration: none;
+    }
+    
+    .remember-forgot a:hover{
+        text-decoration: underline;
+    }
+    
+    .btn{
+        width: 100%;
+        height: 45px;
+        background: #162938;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 1em;
+        color: #fff;
+        font-weight: 500;
+    }
+    
+    .Login-register{
+        font-size: .9em;
+        color: #162938;
+        text-align: center;
+        font-weight: 500;
+        margin: 25px 0 10px;
+    }
+    
+    .Login-register p a {
+        color: #162938;
+        text-decoration: none;
+        font-weight: 600;
+    }
+    
+    .Login-register p a:hover{
+        text-decoration: underline;
+    }</style>
+
+</head>
+<body>
+
+    <header>
+        <h1 class="HITTER WEB">HITTER WEB</h1>
+        <nav class="navigation">
+          <a href="#">HOME</a>
+          <a href="#">ABOUT</a>
+          <a href="#">LINKS</a>
+          <a href="#">SETTING</a>
+          <button class="btnlogin-popuop">LOGIN</button>
+          </nav>
+    </header>
+
+    <div class="wrapper">
+        <div class="form-box Login">
+          <h2>Login</h2>
+          <form action="#">
+            <div class="input-box">
+                <span class="icon">
+                    <ion-icon name="mail-open-outline"></ion-icon>
+                </span>
+                <input type="email" required>
+                <label>Email</label>
+            </div>
+            <div class="input-box">
+                <span class="icon">
+                    <ion-icon name="lock-closed"></ion-icon>
+                </span>
+                <input type="passcode" required>
+                <label1>passcode</label1>
+            </div>
+            <div class="remember-forgot">
+                <label><input type="checkbox">
+                remember me</label>
+                <a href="#">Forgot Password?</a>
+            </div>
+            <button type="submit" class="btn">Login</button>
+              <div class="Login-register">
+                <p>don't have an account?<a href="#"
+                class="register-link">Register</a></p>
+              </div>         
+          </form>
+        </div>
+    </div>
+    
+
+    <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
+
